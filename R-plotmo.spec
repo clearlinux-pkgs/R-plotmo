@@ -4,7 +4,7 @@
 #
 Name     : R-plotmo
 Version  : 3.3.6
-Release  : 4
+Release  : 5
 URL      : https://cran.r-project.org/src/contrib/plotmo_3.3.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plotmo_3.3.6.tar.gz
 Summary  : Plot a Model's Response and Residuals
