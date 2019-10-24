@@ -4,7 +4,7 @@
 #
 Name     : R-plotmo
 Version  : 3.5.5
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/plotmo_3.5.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plotmo_3.5.5.tar.gz
 Summary  : Plot a Model's Residuals, Response, and Partial Dependence Plots
@@ -12,9 +12,6 @@ Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-Formula
 Requires: R-TeachingDemos
-Requires: R-earth
-Requires: R-gbm
-Requires: R-glmnet
 Requires: R-plotrix
 BuildRequires : R-Formula
 BuildRequires : R-TeachingDemos
@@ -23,6 +20,7 @@ BuildRequires : R-gbm
 BuildRequires : R-glmnet
 BuildRequires : R-plotrix
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 [![version](http://www.r-pkg.org/badges/version/plotmo)](https://cran.r-project.org/package=plotmo)
@@ -35,13 +33,13 @@ BuildRequires : buildreq-R
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1561735606
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1571875218
 
 %install
-export SOURCE_DATE_EPOCH=1561735606
+export SOURCE_DATE_EPOCH=1571875218
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -70,7 +68,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
