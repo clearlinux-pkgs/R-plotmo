@@ -4,7 +4,7 @@
 #
 Name     : R-plotmo
 Version  : 3.5.7
-Release  : 35
+Release  : 36
 URL      : https://cran.r-project.org/src/contrib/plotmo_3.5.7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plotmo_3.5.7.tar.gz
 Summary  : Plot a Model's Residuals, Response, and Partial Dependence Plots
@@ -12,39 +12,34 @@ Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-Formula
 Requires: R-TeachingDemos
-Requires: R-earth
-Requires: R-gbm
-Requires: R-glmnet
 Requires: R-plotrix
 BuildRequires : R-Formula
 BuildRequires : R-TeachingDemos
-BuildRequires : R-earth
-BuildRequires : R-gbm
-BuildRequires : R-glmnet
 BuildRequires : R-plotrix
 BuildRequires : buildreq-R
 
 %description
-[![version](http://www.r-pkg.org/badges/version/plotmo)](https://cran.r-project.org/package=plotmo)
-[![downloads](http://cranlogs.r-pkg.org/badges/plotmo)](https://cran.r-project.org/package=plotmo)
+using partial dependence plots and other techniques.
+        Also plot model residuals and other information on the model.
 
 %prep
 %setup -q -c -n plotmo
+cd %{_builddir}/plotmo
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1587064678
+export SOURCE_DATE_EPOCH=1589401231
 
 %install
-export SOURCE_DATE_EPOCH=1587064678
+export SOURCE_DATE_EPOCH=1589401231
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
