@@ -4,7 +4,7 @@
 #
 Name     : R-plotmo
 Version  : 3.5.7
-Release  : 36
+Release  : 37
 URL      : https://cran.r-project.org/src/contrib/plotmo_3.5.7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plotmo_3.5.7.tar.gz
 Summary  : Plot a Model's Residuals, Response, and Partial Dependence Plots
@@ -31,10 +31,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589401231
+export SOURCE_DATE_EPOCH=1589531127
 
 %install
-export SOURCE_DATE_EPOCH=1589401231
+export SOURCE_DATE_EPOCH=1589531127
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
