@@ -4,7 +4,7 @@
 #
 Name     : R-plotmo
 Version  : 3.6.1
-Release  : 46
+Release  : 47
 URL      : https://cran.r-project.org/src/contrib/plotmo_3.6.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plotmo_3.6.1.tar.gz
 Summary  : Plot a Model's Residuals, Response, and Partial Dependence Plots
